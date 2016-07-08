@@ -1,0 +1,2 @@
+explicit casting: (int) a
+division by zero not always raises errors: float/0 equals infinity (can be positive or negative)
