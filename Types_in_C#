@@ -1,0 +1,22 @@
+Types Quiz
+Below are the answers to the Types Quiz, along with a brief discussion.
+
+1. False. All of the built-in integral types have a certain range that they can store, so it is possible for a number to be too big for an int. Furthermore, int can't store floating point values like 1.5. Only integer values.
+
+2. True.
+
+3. byte, short, int, long. byte uses 1 byte, short uses 2, int uses 4, and long uses 8.
+
+4. False. byte is unsigned. sbyte is the signed variation.
+
+5. uint because is is unsigned. The range is shifted up. It can store numbers that are twice as large, but can't store negative numbers.
+
+6. float, double, and decimal.
+
+7. double can store the largest numbers.
+
+8. decimal is the most precise.
+
+9. Because the literal uses double quotes, the variable should be the string type. If it were '8', the type would need to be char, while if it were just 8, it could be int or any of the other integral types (besides char).
+
+10. bool.
