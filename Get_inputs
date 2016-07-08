@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GetInput
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string whatusertyped = Console.ReadLine();
+            int anumber = Convert.ToInt32(whatusertyped); //type converting method 
+            Console.WriteLine(anumber+"\""); // Escape
+            Console.WriteLine(anumber + @"\"); // print special symbols as is using @
+            Console.ReadLine();
+        }
+    }
+}
