@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Helloworld
+namespace Helloworld // this is the biggest group chunck
 {
-    class Program
+    class Program // this is the class
     {
-        static void Main(string[] args)
+        static void Main(string[] args) /*This is a
+        multiple line comment block*/
         {
             Console.WriteLine("Hello World!");
             Console.ReadKey();
