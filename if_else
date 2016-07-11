@@ -1,0 +1,16 @@
+if(condition)
+{
+}
+else if
+{
+}
+else
+{
+}
+
+Operators:
+and &&
+or ||
+
+shorthand if-else operator:
+(boolean condition)? value_if_true:value_if_false;
