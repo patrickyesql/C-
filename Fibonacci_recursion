@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Fibonachi
+{
+    class Program
+    {
+        static int[] F_array;
+        static bool[] F_array_flag;
+                
+        static int Fibonacci(int f)
+
+        {
+            //Recursion body
+            if (F_array_flag[f - 1])
+                return F_array[f-1];
+            else
+            {
+                F_array[f-1]=Fibonacci(f - 1) + Fibonacci(f - 2);
+                F_array_flag[f - 1] = true;
+                return F_array[f-1];
+            }
+        }
+        static void Main(string[] args)
+        {
+            int f = 30;
+            F_array = new int[f];
+            F_array_flag = new bool[f];
+            //Recursion Seed
+            //initialize arrays
+            for (int i_ini = 1; i_ini <= f; i_ini++)
+            {
+                F_array[i_ini - 1] = 0;
+                F_array_flag[i_ini - 1] = false;
+            }
+            F_array[0] = 1;
+            F_array_flag[0] = true;
+            F_array[1] = 1;
+            F_array_flag[1] = true;
+            
+            int i=1;
+            do
+            {
+            Console.Write(Fibonacci(i)+" ");
+            i++;
+            }
+            while (i<=f);
+            Console.ReadKey();
+        }
+    }
+}
