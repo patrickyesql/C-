@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Enumeration
+{
+
+    enum DaysOfWeek { Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday};  //define your own type the underlying type is int
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine((int)DaysOfWeek.Friday);//gives 5
+            Console.ReadKey();
+        }
+    }
+}
