@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Properties
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Vector v1=new Vector();
+            
+            
+        }
+        public class Vector
+        {
+            public string Name { get; set;}="abcd"; //only available after c# version 6
+        }
+    }
+}
