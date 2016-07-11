@@ -1,0 +1,12 @@
+switch(choice)
+{
+  case 1_choice_value:
+    statement;
+    break;//This break is a must if a fallthrough is not desired
+  case 2_choice_value:
+    statement;
+    break;//This break is a must
+  case 3_choice_value:
+    statement;
+    break;//This break is a must
+}
