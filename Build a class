@@ -1,0 +1,30 @@
+namespace OOP_1
+{
+    class Book
+    {
+        private string title; //these variables are private as default
+        private string author;
+        private int pages;
+        private int wordcount;
+
+        //Constructors
+        public Book(string title) //most of the cases they are public constructors
+        {
+            this.title = title; //use this to avoid name collision
+        }
+        public Book(string title, string author)
+        {
+            this.title = title;
+            this.author = author;
+        }
+        //Methodss
+        public string GetTitle()
+        {
+            return title;
+        }
+        public void SetTitle(string title)
+        {
+            this.title = title;
+        }
+    }
+}
