@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace List_Dict
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            /*LIST*/
+            List<string> listofstrings=new List<string>;
+            listofstrings.Insert(0,"text");//insert to the position
+            string firstItem=listofstrings.ElementAt(0);//find element at offset
+            listofstrings.Add("second");//add to the end
+            listofstrings.Clear();//remove everything from list
+            List<int> somenumberlist=new List<int>(){1,2,3,4,5};//collection initializer
+
+            /*DICTIONARY*/
+            Dictionary<string,int> phonebook=new Dictionary<string,int>();//define a dictionary
+            phonebook["Gates, Bill"]=5550100;//add new value pair
+            int billsnumber=phonebook["Gates, Bill"]; //get value from a dictionary
+        }
+    }
+}
