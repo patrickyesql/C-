@@ -1,0 +1,5 @@
+virtual: use in the base class when defining a placeholder method
+override: use in the derived class when defining a new implementation
+base: use in the derived class when calling method in the base class
+abstract: use to prevent instantiate a dummy base class
+new: the same way as override but unrelated......
