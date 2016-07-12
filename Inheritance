@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Inheritance
+{
+    class Polygon
+    {
+        public int NumberofSides { get; set; }
+        public Polygon()
+        {
+            NumberofSides = 0;
+        }
+        public Polygon(int numberofSides)
+        {
+            NumberofSides = numberofSides;
+        }
+    }
+   sealed class Square:Polygon //use sealed to prevent inheritance
+    {
+        public float Size { get; set; }
+        public Square(float size)
+        {
+            Size = size;
+            NumberofSides = 4;
+        }
+    }
+
+}
+
+
+namespace Inheritance
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Polygon polygon = new Polygon(3);
+            Square square = new Square(4.5f); 
+
+            Polygon polygon2 = new Square(3.5f);//valid allocation, however polygon2 only works as Polygon type
+
+            if (polygon2 is Square) // check type
+                Console.WriteLine("is Square!");
+            Square square2 = polygon2 as Square;//Type casting
+        }
+    }
+}
+
+use public/protected/private to constrain member's accessibility
+use partial class to separate the definition of class into multiple files
