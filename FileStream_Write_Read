@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace Alternative_Read_Write
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Filestream and a streamwriter
+            FileStream filestream = File.OpenWrite(@"C:\Users\yewen\Desktop\C_Sharp\Writer_test.txt");//initiate a write filestream
+            StreamWriter writer = new StreamWriter(filestream);//the streamwriter is associated with the filestream
+            writer.Write(3);
+            writer.Write("Hello");
+            //Don't forget to close
+            writer.Close();
+
+            FileStream fileStream = File.OpenRead("C:/Place/Full/Path/Here3.txt");//open read filestream
+            StreamReader reader = new StreamReader(fileStream);//initiate a streamreader attached to a read filestream
+            char nextChar = (char)reader.Read();//return a single character
+            //read multiple characters
+            char[] buffer = new char[2];
+            reader.Read(buffer, 0, 2);
+            string newstring = new string(buffer);
+            //read line
+            string restofLine = reader.ReadLine();
+            reader.Close();
+        }
+    }
+}
