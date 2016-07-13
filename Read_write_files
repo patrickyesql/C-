@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+//NEED THIS ONE!!!
+using System.IO;
+
+namespace Read_Write_Files
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string stringtoWrite = "Hello, I will save this to the file!";
+            File.WriteAllText(@"C:\Users\yewen\Desktop\C_Sharp\Write_file_test.txt",stringtoWrite);
+            string[] arraytoWrite = new string[2];
+            //Write to multiple lines
+            arraytoWrite[0]="This is line 1";
+            arraytoWrite[1]="This is line 2";
+            File.WriteAllLines(@"C:\Users\yewen\Desktop\C_Sharp\Write_file_test2.txt",arraytoWrite);
+            //Read from files
+            string filecontents = File.ReadAllText(@"C:\Users\yewen\Desktop\C_Sharp\Write_file_test.txt");
+            string[] filecontentsbyline = File.ReadAllLines(@"C:\Users\yewen\Desktop\C_Sharp\Write_file_test2.txt");
+        }
+    }
+}
