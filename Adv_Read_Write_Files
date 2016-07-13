@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace Advanced_Read_Write_Files
+{
+    public class HighScore
+    {
+        public string Name { get; set; }
+        public int Score {get;set;}
+        public void SaveHighScores(HighScore[] highscores)
+        {
+            string allHighScoresText = "";
+            foreach(HighScore score in highscores)
+                allHighScoresText +="{score.Name},{score.Score}\n"; //string interpolation use $ in C# 6.0
+            File.WriteAllText("highscores.csv", allHighScoresText);
+        }
+        public HighScore[] LoadHighScores(string fileName)
+        {
+            string[] highScoresText = File.ReadAllLines(fileName);
+            HighScore[] highScores = new HighScore[highScoresText.Length];
+            for (int index=0; index<highScoresText.Length;index++)
+            {
+                string[] tokens = highScoresText[index].Split(',');// use split function to break a string into tokens, very common
+                string name = tokens[0];
+                int score = Convert.ToInt32(tokens[1]);
+                highScores[index] = new HighScore() { Name = name, Score = score };
+            }
+            return highScores;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+
+
+        }
+    }
+}
