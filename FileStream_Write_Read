@@ -29,6 +29,7 @@ namespace Alternative_Read_Write
             //read line
             string restofLine = reader.ReadLine();
             reader.Close();
+            //Can use binary Writer and Reader
         }
     }
 }
