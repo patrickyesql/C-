@@ -1,0 +1,40 @@
+//Named Parameter
+clamp(min:50,max:100);
+//variable number of parameters
+public static double Average (params int[] numbers)
+{
+  double total=0;
+  foreach (int number in numbers)
+  total +=number;
+  return total/numbers.Length;
+}
+Average(2,3,4,5);
+Average(numbers);
+
+//parameters with ref and out, they work the same
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ref_out
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int banana = 10;
+            Messwithvariables(out banana);//will modify the value type it self
+            Console.WriteLine(banana);//the output is 15 instead of 10
+            Console.ReadKey();
+        }
+        static void Messwithvariables(out int x)
+        {
+            x = 15;
+        }
+
+
+    }
+}
+
