@@ -32,7 +32,7 @@ namespace Try_Catch_Throw
             }
             catch(Exception e) 
             {
-                if (e.Message == "me!")
+                if (e.Message == "me!") //can use exception filter in c# 6.0
                 Console.WriteLine("Gotcha!");
             }
             Console.ReadKey();
