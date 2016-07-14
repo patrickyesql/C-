@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Try_Catch_Throw
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            try
+            {
+                string input=Console.ReadLine();
+                int input_num=Convert.ToInt32(input);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("Error Occurred!");
+            }
+            finally
+            {
+                Console.WriteLine("Finally");
+            }
+            //throw new Exception("Just do your job!");//Additional information 
+
+            try
+            {
+                throw new Exception("me!");
+            }
+            catch(Exception e) 
+            {
+                if (e.Message == "me!")
+                Console.WriteLine("Gotcha!");
+            }
+            Console.ReadKey();
+        }
+    }
+}
