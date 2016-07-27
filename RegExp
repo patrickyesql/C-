@@ -37,3 +37,44 @@ class Program
 	}
     }
 }
+
+using System;
+using System.Text.RegularExpressions;
+
+class Program
+{
+    static void Main()
+    {
+	string value = "4 AND 5";
+
+	// Get first match.
+	Match match = Regex.Match(value, @"\d");
+	if (match.Success)
+	{
+	    Console.WriteLine(match.Value);
+	}
+
+	// Get second match.
+	match = match.NextMatch();
+	if (match.Success)
+	{
+	    Console.WriteLine(match.Value);
+	}
+    }
+}
+//ignores case
+using System;
+using System.Text.RegularExpressions;
+
+class Program
+{
+    static void Main()
+    {
+	const string value = "TEST";
+	// ... This ignores the case of the "TE" characters.
+	if (Regex.IsMatch(value, "te..", RegexOptions.IgnoreCase))
+	{
+	    Console.WriteLine(true);
+	}
+    }
+}
